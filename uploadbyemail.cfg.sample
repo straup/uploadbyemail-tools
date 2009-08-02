@@ -1,0 +1,11 @@
+[flickr]
+api_key=YER_FLICKR_API_KEY
+api_secret=YER_FLICKR_API_SECRET
+auth_token=YER_FLICKR_AUTH_TOKEN
+api_handler=LibXML
+
+[uploadbyemail]
+add_to_set=0
+is_public=0
+is_friend=0
+is_family=0

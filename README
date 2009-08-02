@@ -1,0 +1,25 @@
+YOU PROBABLY DON'T WANT TO TRY USING THIS YET. NO. REALLY.
+
+It works for me but I doubt it will work for you. Yet.
+
+--
+
+Requirements:
+
+* http://search.cpan.org/dist/Net-Flickr-API-1.69 (or higher)
+
+* http://github.com/straup/filtr
+
+* (other stuff...)
+
+--
+
+See also:
+
+* http://www.aaronland.info/weblog/2006/07/31/baconmelon/#filtr
+
+* http://rcrowley.org/2007/11/08/introducing-curvr/
+
+* http://rcrowley.org/2007/12/30/postfixing-your-email-life#comments
+
+* http://github.com/rcrowley/curvr/

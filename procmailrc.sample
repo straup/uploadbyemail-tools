@@ -1,0 +1,8 @@
+LOGFILE=/PATH/TO/procmail.log
+VERBOSE=off
+PATH=/bin:/usr/bin:/usr/local/bin:/PATH/TO/filtr:/PATH/TO/uploadbyemail-tools
+SHELL=/bin/sh
+
+:0:
+* ^From:you@example.com
+|/PATH/TO/uploadbyemail-tools/uploadbyemail.sh /PATH/TO/uploadbyemail.cfg
