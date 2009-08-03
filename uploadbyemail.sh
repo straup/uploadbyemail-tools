@@ -1,11 +1,7 @@
 #!/bin/sh
 
-# please to read me from environment variable set in .procmailrc
-
-FLICKR_CFG=$1
-
 DATE=`date`
-echo "[start] ${DATE}"
+echo "[start] ${DATE} reading ${FLICKR_CFG}"
 
 PHOTO_AND_STUFF=`cat -u /dev/stdin | ube-receivemail.pl`
 echo "[parse] ${PHOTO_AND_STUFF}"
