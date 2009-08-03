@@ -145,8 +145,8 @@ sub get_parts {
 sub write_image {
         my $image = shift;
         my $ext = ($image->filename() =~ /\.mp4$/) ? ".mp4" : ".jpg";
-        # FIX ME...use File::Temp
-        my $fname = "/tmp/flickrimg-".time() . $ext;
+
+        my $fname = File::Temp->new(UNLINK=>0, SUFFIX=>$ext);
         return &write_part($fname, $image);
 }
 
