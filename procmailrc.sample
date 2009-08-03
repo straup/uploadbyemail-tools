@@ -1,8 +1,18 @@
+# You will need to update this file and change
+# the various instance of /PATH/TO to the correct
+# paths from which things will be read and written
+# to. Of particular importance will be paths to
+# the filtr application and the folder for the
+# uploadbyemail-tools scripts itself.
+#
+# See also: uploadbyemail.cfg.sample
+
 LOGFILE=/PATH/TO/procmail.log
 VERBOSE=off
 PATH=/bin:/usr/bin:/usr/local/bin:/PATH/TO/filtr:/PATH/TO/uploadbyemail-tools
 SHELL=/bin/sh
+FLICKR_CFG=/PATH/TO/uploadbyemail.cfg
 
 :0:
 * ^From:you@example.com
-|/PATH/TO/uploadbyemail-tools/uploadbyemail.sh /PATH/TO/uploadbyemail.cfg
+|uploadbyemail.sh
