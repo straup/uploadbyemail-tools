@@ -41,11 +41,9 @@ sub main {
                 return 0;
         }
 
-        my ($photo, $args, $title, $perms) = &build_args($fname, $parts->{'subject'});
+        my @args = &build_args($fname, $parts->{'subject'});
 
-        # FIX ME: figure out a separator that works with awk
-
-        print STDOUT "$photo $args\n";
+        print STDOUT join("|", @args);
 
         &wtf("finished at " . time());
         return 1;
@@ -64,12 +62,14 @@ sub build_args {
                    "f" => "filtr");
         
         my $filter = "postr";
+        my $extra = "";
+
         my $title = "";
         my $perms = "";
 
         if ($subject =~ /^\.(r|f|p|d)/i) {
                 my $which = $1;
-                $filter = $key{$which};
+                $filter = "$key{$which}";
         }
 
         elsif ($subject =~ /-f\s+(r|f|p|d|P)/){
@@ -83,15 +83,16 @@ sub build_args {
                 $title = $1;
         }
         
-        if ($subject =~ /-p\s+([a-z]{2,3})/){
+        if ($subject =~ /-p\s+(pub|pri|fr|fa|ff)/){
                 $perms = $1;
         }
 
         if ($fname =~ /\.mp4$/) {
-                $filter = "movr $filter";
+                $filter = "movr";
+                $extra = $filter;
         }
 
-        return ($fname, $filter, $title, $perms);
+        return ($fname, $filter, $extra, $title, $perms);
 }
 
 sub get_email {
