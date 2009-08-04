@@ -18,7 +18,7 @@ echo "[extra] '${EXTRA}'"
 echo "[title] '${TITLE}'"
 echo "[perms] '${PERMS}'"
 
-FILTRD=`ube-processphoto.sh ${PHOTO} ${FILTR} ${PROCESS}`
+FILTRD=`ube-processphoto.sh ${PHOTO} ${FILTR} ${PROCESS} ${EXTRA}`
 echo "FILTRD) ${FILTRD}"
 
 ID=`ube-postphoto.pl -c ${FLICKR_CFG} -i ${FILTRD} -p ${PROCESS} -T "${TITLE}" -P ${PERMS}`
