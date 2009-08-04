@@ -64,6 +64,12 @@ sub main {
                         $public = 1;
                 }
 
+                elsif ($priv eq 'pri'){
+                        $public = 0;
+                        $friend = 0;
+                        $family = 0;
+                }
+
                 elsif ($priv eq 'fr'){
                         $public = 0;
                         $friend = 1;
