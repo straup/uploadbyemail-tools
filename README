@@ -1,6 +1,10 @@
-YOU PROBABLY DON'T WANT TO TRY USING THIS YET. NO. REALLY.
+This all works, but there is no documentation yet.
 
-It works for me but I doubt it will work for you. Yet.
+Basically you'll need to be able to install and use a procmailrc file and a
+bunch of other stuff.
+
+If you're itching to get started, take a look at procmailrc.sample and start
+filling in the blanks. It's more tedious than it is hard.
 
 --
 
